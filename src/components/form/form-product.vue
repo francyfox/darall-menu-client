@@ -112,7 +112,7 @@ async function handleSubmit(e: MouseEvent) {
 <template>
     <n-form ref="formRef" :model="formData.product" :rules="rules">
         <n-upload
-            :action="`${import.meta.env.VITE_API_URL}/image`"
+            :action="`${axiosInstance.defaults.baseURL}/image`"
             :default-file-list="fileList"
             :multiple="false"
             @finish="uploadFinish"

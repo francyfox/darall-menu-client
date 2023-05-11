@@ -166,7 +166,7 @@ const addCategory = async () => {
         size="huge"
     >
         <n-upload
-            :action="`${import.meta.env.VITE_API_URL}/image`"
+            :action="`${axiosInstance.defaults.baseURL}/image`"
             :default-file-list="fileList"
             :multiple="false"
             @finish="uploadFinish"
