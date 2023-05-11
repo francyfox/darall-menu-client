@@ -166,7 +166,7 @@ const addCategory = async () => {
         size="huge"
     >
         <n-upload
-            action="http://localhost:3000/api/image"
+            :action="`${import.meta.env.VITE_API_URL}/image`"
             :default-file-list="fileList"
             :multiple="false"
             @finish="uploadFinish"
